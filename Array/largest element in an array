@@ -1,11 +1,10 @@
 class Solution {
 public:
     int largestElement(vector<int>& nums) {
-        int i=0;
         nums[0]= largest;
         for(int i=1; i<n;i++){
-            if(arr[i]>largest){
-                arr[i]=largest;
+            if(nums[i]>largest){
+                nums[i]=largest;
             }
         }
         return largest;
