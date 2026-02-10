@@ -1,0 +1,28 @@
+# include <iostream>
+using namespace std;
+
+int largestsum(int arr[][3], int row, int col ){
+    int sum =0;
+    int rowindex =-1;
+    int max= INT_MIN;
+    for(int i =0; i<row; i++){
+        sum=0;
+        for( int j =0; j<col; j++){
+            sum+= arr[i][j];
+            if( sum> max){
+                max = sum;
+                rowindex = i+1;
+            }
+        }
+      
+
+    }
+      cout<<"the largest sum is : "<< max<< endl;;
+        return rowindex;
+
+}
+int main(){
+    int arr[3][3]={1,2,3,4,5,6,7,8,9};
+    int ans = largestsum(arr,3,3);
+cout<<" max sum is at row: "<< ans;
+}
