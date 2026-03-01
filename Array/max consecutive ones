@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int consecutiveone(vector<int>& arr){
+
+    int count = 0;
+    int maxCount = 0;
+
+    for(int i=0; i<arr.size(); i++){
+
+        if(arr[i] == 1){
+            count++;
+
+            if(count > maxCount){
+                maxCount = count;
+            }
+        }
+        else{
+            count = 0;
+        }
+    }
+
+    return maxCount;
+}
+
+int main(){
+
+    vector<int> arr = {1,1,0,1,1,1,0,1,1};
+
+    cout << consecutiveone(arr);
+}
+
+
+#can use maxcount= max(count,maxcount);
